@@ -2,6 +2,8 @@ import socket
 import cv2
 import numpy as np
 import time
+import pyttsx3
+import csv
 from pynput import keyboard
 import multiprocessing
 import os
@@ -9,6 +11,9 @@ import os
 # ESP32 IP address and port
 ESP32_IP = "192.168.10.209"  # Replace with your ESP32 IP address
 ESP32_PORT = 80
+
+# Initialize text-to-speech
+engine = pyttsx3.init()
 
 # Global variables for inter-process communication
 frame_queue = multiprocessing.Queue()
